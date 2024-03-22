@@ -63,10 +63,44 @@ LDR Features of LDR are as follows:
 
 
 ## PROGRAM:
+```
+NAME:OVIYA P
+REG NO: 212223110033
+int sensorPin = A0; 
+int sensorValue = 0; 
+void setup() 
+{
+Serial.begin(9600); 
+pinMode(13, OUTPUT);
+}
+void loop() 
+{
+  sensorValue = analogRead(sensorPin);
+  Serial.print("OUTPUT:");
+  Serial.println(sensorValue); 
+  delay(500);
+  if(sensorValue<=823)
+  {
+  digitalWrite(13, HIGH);  
+  delay(500);
+  }
+  else
+  {
+  digitalWrite(13, LOW);  
+  delay(500);
+  }
+}
+```
 
 ## CIRCUIT DIAGRAM:
+![image](https://github.com/Oviya24032K6/Automatic-Light-control-using-Arduino-Controller/assets/147139999/f73d8224-1419-402b-b894-b179b8ec0f94)
 
 ## OUTPUT:
+![image](https://github.com/Oviya24032K6/Automatic-Light-control-using-Arduino-Controller/assets/147139999/aee940d1-8ddc-440a-9578-400370cf871c)
+
+
+
+
 
 ## RESULT:
 Thus the automatic light controller was designed and simulated using LDR and Arduino UNO controller.
